@@ -41,6 +41,7 @@
     "ag-grid": "10.0.x"
   },
   "dependencies": {
+    "create-react-class": "^15.5.3",
     "prop-types": "^15.5.10"
   }
 }
