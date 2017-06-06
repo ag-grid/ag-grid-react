@@ -6,6 +6,7 @@ import {ReactFrameworkComponentWrapper} from "./reactFrameworkComponentWrapper";
 var React = require('react');
 var ReactDOM = require('react-dom');
 var AgGrid = require('ag-grid');
+var PropTypes = require('prop-types');
 
 export var AgGridReact = React.createClass({
 
@@ -82,16 +83,16 @@ export var AgGridReact = React.createClass({
 });
 
 AgGridReact.propTypes = {
-    gridOptions: React.PropTypes.object,
+    gridOptions: PropTypes.object,
 };
 
-addProperties(AgGrid.ComponentUtil.getEventCallbacks(), React.PropTypes.func);
-addProperties(AgGrid.ComponentUtil.BOOLEAN_PROPERTIES, React.PropTypes.bool);
-addProperties(AgGrid.ComponentUtil.STRING_PROPERTIES, React.PropTypes.string);
-addProperties(AgGrid.ComponentUtil.OBJECT_PROPERTIES, React.PropTypes.object);
-addProperties(AgGrid.ComponentUtil.ARRAY_PROPERTIES, React.PropTypes.array);
-addProperties(AgGrid.ComponentUtil.NUMBER_PROPERTIES, React.PropTypes.number);
-addProperties(AgGrid.ComponentUtil.FUNCTION_PROPERTIES, React.PropTypes.func);
+addProperties(AgGrid.ComponentUtil.getEventCallbacks(), PropTypes.func);
+addProperties(AgGrid.ComponentUtil.BOOLEAN_PROPERTIES, PropTypes.bool);
+addProperties(AgGrid.ComponentUtil.STRING_PROPERTIES, PropTypes.string);
+addProperties(AgGrid.ComponentUtil.OBJECT_PROPERTIES, PropTypes.object);
+addProperties(AgGrid.ComponentUtil.ARRAY_PROPERTIES, PropTypes.array);
+addProperties(AgGrid.ComponentUtil.NUMBER_PROPERTIES, PropTypes.number);
+addProperties(AgGrid.ComponentUtil.FUNCTION_PROPERTIES, PropTypes.func);
 
 function addProperties(listOfProps: string[], propType: any) {
     listOfProps.forEach( (propKey: string)=> {
