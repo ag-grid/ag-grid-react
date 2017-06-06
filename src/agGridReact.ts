@@ -7,8 +7,9 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var AgGrid = require('ag-grid');
 var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 
-export var AgGridReact = React.createClass({
+export var AgGridReact = createReactClass({
 
 
     render: function() {
