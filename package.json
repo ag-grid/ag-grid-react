@@ -39,5 +39,8 @@
   },
   "peerDependencies": {
     "ag-grid": "10.0.x"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10"
   }
 }
