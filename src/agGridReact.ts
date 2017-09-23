@@ -136,7 +136,11 @@ export class AgGridReact extends Component<AgGridReactProps, {}> {
     }
 
     areEquivalent(a, b) {
-        return AgGridReact.areEquivalent(this.copyObject(a), this.copyObject(b))
+        // Only invoke copy object id they are objects
+        const _a = (typeof (a) === 'object') ? this.copyObject(a) : a;
+        const _b = (typeof (b) === 'object') ? this.copyObject(b) : b;
+
+        return AgGridReact.areEquivalent(_a, _b);
     }
 
     static areEquivalent(a, b) {
