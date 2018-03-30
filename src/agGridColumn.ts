@@ -6,9 +6,11 @@ import * as AgGrid from "ag-grid";
 import {ColDef, ColGroupDef} from "ag-grid";
 
 export interface AgGridColumnProps extends ColDef {
+    headerComponentFramework?: React.ComponentType;
 }
 
 export interface AgGridColumnGroupProps extends ColGroupDef {
+    headerComponentFramework?: React.ComponentType;
 }
 
 export declare class AgGridColumn extends Component<AgGridColumnProps | AgGridColumnGroupProps, {}> {
