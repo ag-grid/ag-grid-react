@@ -1,5 +1,6 @@
 // ag-grid-react v17.0.0
 /// <reference types="react" />
+import * as React from "react";
 import { Component } from "react";
 import * as AgGrid from "ag-grid";
 import { GridOptions } from "ag-grid";
@@ -15,7 +16,10 @@ export declare class AgGridReact extends Component<AgGridReactProps, {}> {
     columnApi: AgGrid.ColumnApi;
     protected eGridDiv: HTMLElement;
     constructor(props: any, state: any);
-    render(): any;
+    render(): React.DetailedReactHTMLElement<{
+        style: any;
+        ref: (e: HTMLElement) => void;
+    }, HTMLElement>;
     createStyleForDiv(): any;
     componentDidMount(): void;
     shouldComponentUpdate(): boolean;
