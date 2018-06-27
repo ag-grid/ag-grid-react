@@ -1,4 +1,3 @@
-import * as DOM from 'react-dom-factories';
 import * as React from "react";
 import {Component, ReactChild, ReactElement} from "react";
 import * as PropTypes from "prop-types";

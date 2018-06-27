@@ -1,6 +1,5 @@
-import * as DOM from "react-dom-factories";
 import * as React from "react";
-import { Component } from "react";
+import { Component, createElement } from "react";
 import * as PropTypes from "prop-types";
 import * as AgGrid from "ag-grid";
 import { Autowired, BaseComponentWrapper, Bean, FrameworkComponentWrapper, IComponent, WrapableInterface, Promise, GridOptions } from "ag-grid";
@@ -26,7 +25,7 @@ export class AgGridReact extends Component<AgGridReactProps, {}> {
     }
 
     render() {
-        return DOM.div({
+        return createElement("div", {
             style: this.createStyleForDiv(),
             ref: e => {
                 this.eGridDiv = e;
